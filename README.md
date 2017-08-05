@@ -182,11 +182,11 @@ A simple API is exposed to let you set the name of the ongoing transaction and s
 For example, this can be used to let Opbeat know about route changes even if you're not using a supported router.  
 
 
-* `startTransaction()`<br>
+* `startTransaction()`
 Call this to let Opbeat know a new transaction has started.
 For example, if you're not using a supported router, you can use `startTransaction` to let Opbeat know that a route change has begun.
 
-* `setTransactionName(transactionName, transactionType)`<br>
+* `setTransactionName(transactionName, transactionType)`
 Set the name of the ongoing transaction to `transactionName`. For route changes, `transactionName` should be the abstract or parametrized route path (`/coffees/:beanID` and not `/coffees/99`).
 You must also specify a type. `transactionType` is an arbitrary string, but transactions of the same type are shown together in the Opbeat UI. For route changes, you should use the string `route-change`.
 `setTransactionName` will automatically call `startTransaction` if no transaction has been started yet. 
@@ -214,7 +214,7 @@ This adds `MyComponent.displayName = 'MyComponent'` automatically to compoenents
 Remember to add the plugin to your `.babelrc` or your webpack configuration:
 
 
-<b>Note on 'transform-decorators-legacy' plugin:</b> If you are using `transform-decorators-legacy`, make sure it appears in the list of plugins *after* `add-react-displayname`. 
+**Note on 'transform-decorators-legacy' plugin:** If you are using `transform-decorators-legacy`, make sure it appears in the list of plugins *after* `add-react-displayname`. 
 
 
 
@@ -250,4 +250,4 @@ Tests: `npm run karma`
 End to end tests: `./node_modules/.bin/gulp test:e2e:react-run`
 
 
-<br>Made with ♥️ and ☕️ by Opbeat and our community.
+Made with ♥️ and ☕️ by Opbeat and our community.
